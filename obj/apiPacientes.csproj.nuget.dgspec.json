@@ -1,28 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Fontes\\csharp\\apiPacientes\\apiPacientes.csproj": {}
+    "C:\\Users\\gabri\\Projetos\\apiPacientes\\apiPacientes.csproj": {}
   },
   "projects": {
-    "D:\\Fontes\\csharp\\apiPacientes\\apiPacientes.csproj": {
+    "C:\\Users\\gabri\\Projetos\\apiPacientes\\apiPacientes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Fontes\\csharp\\apiPacientes\\apiPacientes.csproj",
+        "projectUniqueName": "C:\\Users\\gabri\\Projetos\\apiPacientes\\apiPacientes.csproj",
         "projectName": "apiPacientes",
-        "projectPath": "D:\\Fontes\\csharp\\apiPacientes\\apiPacientes.csproj",
-        "packagesPath": "C:\\Users\\MGF\\.nuget\\packages\\",
-        "outputPath": "D:\\Fontes\\csharp\\apiPacientes\\obj\\",
+        "projectPath": "C:\\Users\\gabri\\Projetos\\apiPacientes\\apiPacientes.csproj",
+        "packagesPath": "C:\\Users\\gabri\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gabri\\Projetos\\apiPacientes\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\MGF\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\gabri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

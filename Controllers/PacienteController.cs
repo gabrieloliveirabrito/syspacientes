@@ -9,8 +9,9 @@ namespace apiPacientes.Controllers
     public class PacientesController : Controller
     {
         //injeção de dependencia
-        private readonly IPacienteRepository pacienteRepository; 
-        public PacientesController(IPacienteRepository pacienteRepository){
+        private readonly IPacienteRepository pacienteRepository;
+        public PacientesController(IPacienteRepository pacienteRepository)
+        {
             this.pacienteRepository = pacienteRepository;
         }
         /*
@@ -25,47 +26,52 @@ namespace apiPacientes.Controllers
         */
         //[DisableCors()]
         [HttpGet]
-        public IEnumerable<Paciente> GetAll(){
+        public IEnumerable<Paciente> GetAll()
+        {
             return pacienteRepository.GetAll();
         }
 
-        [HttpGet("{id}", Name="GetPaciente")]
-        public IActionResult GetById(long id){
+        [HttpGet("{id}", Name = "GetPaciente")]
+        public IActionResult GetById(long id)
+        {
             var paciente = pacienteRepository.Find(id);
-            if(paciente == null)
+            if (paciente == null)
                 return NotFound(); //status code 404
             return new ObjectResult(paciente);
         }
 
         [HttpPost]
-        public IActionResult Create([FromBody] Paciente paciente){
-            if(paciente == null)
+        public IActionResult Create([FromBody] Paciente paciente)
+        {
+            if (paciente == null)
                 return BadRequest(); //status code 400
             pacienteRepository.Add(paciente);
-            return CreatedAtRoute("GetPaciente", new{id=paciente.id}, paciente);
+            return CreatedAtRoute("GetPaciente", new { id = paciente.id }, paciente);
         }
-        
+
         [HttpPut]
-        public IActionResult Update(long id,[FromBody] Paciente paciente){
+        public IActionResult Update(long id, [FromBody] Paciente paciente)
+        {
             var pacienteUp = pacienteRepository.Find(id);
-            if(pacienteUp == null)
-                return NotFound(); 
-            if(paciente == null || paciente.id != id)
+            if (pacienteUp == null)
+                return NotFound();
+            if (paciente == null || paciente.id != id)
                 return BadRequest();
-            
+
             //regra de negócio
             //Só vou atualizar 2 campos: Comorbidade e Grau.
             pacienteUp.comorbidade = paciente.comorbidade;
-            pacienteUp.grau        = paciente.grau;
+            pacienteUp.grau = paciente.grau;
             pacienteRepository.Update(pacienteUp);
             //status code 204 o servidor processou a requisição
             return new NoContentResult();
         }
 
-        [HttpDelete]
-        public IActionResult Delete(long id){
+        [HttpDelete("{id:int}")]
+        public IActionResult Delete([FromRoute] long id)
+        {
             var paciente = pacienteRepository.Find(id);
-            if(paciente == null)
+            if (paciente == null)
                 return NotFound();
             pacienteRepository.Remove(id);
             return new NoContentResult(); //204 o servidor processou a requisição e não há o que ele retornar;

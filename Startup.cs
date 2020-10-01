@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using apiPacientes.Models;
@@ -11,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
@@ -54,19 +56,25 @@ namespace apiPacientes
                 app.UseDeveloperExceptionPage();
             }
 
+            IFileProvider provider = new PhysicalFileProvider(Path.Combine(env.ContentRootPath, "frontend"));
+
             app.UseHttpsRedirection();
-
+            app.UseDefaultFiles(new DefaultFilesOptions
+            {
+                FileProvider = provider
+            });
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                FileProvider = provider,
+                RequestPath = ""
+            });
             app.UseRouting();
-
             app.UseCors();
-
             app.UseAuthorization();
-
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
-            
         }
     }
 }

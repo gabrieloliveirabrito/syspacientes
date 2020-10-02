@@ -6,6 +6,11 @@
     <title>@ViewData["Title"] - pacientesPessoas</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <!-- https://goo.gl/OOhYW5 -->
+	<link rel="manifest" href="~/manifest.json">
+
+	<!-- https://goo.gl/qRE0vM -->
+	<meta name="theme-color" content="#607fbe">
 </head>
 <body>
     <header>
@@ -26,7 +31,10 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Teste">Teste</a>
-                        </li>
+                        </li>                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Pacientes" asp-action="Index">Pacientes</a>
+                        </li>                        
                     </ul>
                 </div>
             </div>

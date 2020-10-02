@@ -39,6 +39,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[*, )"
+            },
             "WebEssentials.AspNetCore.PWA": {
               "target": "Package",
               "version": "[1.0.65, )"

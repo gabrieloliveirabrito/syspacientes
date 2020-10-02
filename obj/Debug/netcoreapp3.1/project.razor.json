@@ -14517,6 +14517,16 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "d:\\Fontes\\csharp\\pacientesPessoas\\Views\\Pacientes\\Index.cshtml",
+      "TargetPath": "Views\\Pacientes\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Fontes\\csharp\\pacientesPessoas\\Views\\Pacientes\\Editar.cshtml",
+      "TargetPath": "Views\\Pacientes\\Editar.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "d:\\Fontes\\csharp\\pacientesPessoas\\Views\\_ViewStart.cshtml",
       "TargetPath": "Views\\_ViewStart.cshtml",
       "FileKind": "mvc"
@@ -14544,6 +14554,11 @@
     {
       "FilePath": "d:\\Fontes\\csharp\\pacientesPessoas\\Views\\Home\\Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "d:\\Fontes\\csharp\\pacientesPessoas\\Views\\Pacientes\\Excluir.cshtml",
+      "TargetPath": "Views\\Pacientes\\Excluir.cshtml",
       "FileKind": "mvc"
     }
   ],

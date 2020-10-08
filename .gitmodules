@@ -1,0 +1,6 @@
+[submodule "pacientesPessoas"]
+	path = pacientesPessoas
+	url = https://github.com/gabrieloliveirabrito/syspacientes.git
+[submodule "apiPacientes"]
+	path = apiPacientes
+	url = https://github.com/gabrieloliveirabrito/syspacientes.git
